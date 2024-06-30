@@ -24,7 +24,7 @@ RUN go get -t -v -d ./...
 
 RUN GOOS=linux go build -a -o horusec-core-main ./cmd/app/main.go
 
-FROM alpine:3.15.0
+FROM alpine:3
 
 COPY --from=builder /core/horusec-core-main .
 

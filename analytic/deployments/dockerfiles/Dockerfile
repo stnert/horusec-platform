@@ -25,7 +25,7 @@ RUN go get -t -v -d ./...
 RUN GOOS=linux go build -a -o horusec-analytic-main ./cmd/app/main.go
 RUN GOOS=linux go build -a -o horusec-analytic-migrate-v1-v2 ./cmd/migration/v2/main.go
 
-FROM alpine:3.15.0
+FROM alpine:3
 
 COPY --from=builder /analytic/horusec-analytic-main .
 COPY --from=builder /analytic/horusec-analytic-migrate-v1-v2 .

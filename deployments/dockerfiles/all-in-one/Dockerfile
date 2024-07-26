@@ -45,7 +45,7 @@ ADD . .
 RUN cd manager && yarn
 RUN cd manager && yarn build
 
-FROM docker:dind
+FROM docker:27.1.1-dind-alpine3.20
 
 ENV HORUSEC_DISABLE_EMAILS=true
 ENV HORUSEC_ENABLE_DEFAULT_USER=true
